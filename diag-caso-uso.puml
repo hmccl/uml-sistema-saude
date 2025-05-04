@@ -8,8 +8,6 @@ actor Secretário
 actor Funcionário
 actor Médico
 
-Funcionário <|-- Secretário
-
 rectangle SUS {
   Secretário -- (Cadastrar médico)
   Secretário -- (Cadastrar unidade de saúde)
@@ -17,7 +15,7 @@ rectangle SUS {
   Secretário -- (Supervisionar sistema)
   (Consultar agenda) -- Médico
   Funcionário -- (Agendar consulta)
-  (Cadastrar cidadão) .> (Agendar consulta) : <<extends>>
+  (Agendar consulta) .> (Cadastrar cidadão) : <<include>>
 }
 
 @enduml
