@@ -11,9 +11,10 @@ actor Médico
 rectangle SUS {
   Secretário -- (Cadastrar médico)
   Secretário -- (Cadastrar unidade de saúde)
-  Secretário -- (Escalar médicos)
+  Secretário -- (Escalar médico)
   Secretário -- (Supervisionar sistema)
   (Consultar agenda) -- Médico
+  Funcionário -- (Cadastrar cidadão)
   Funcionário -- (Agendar consulta)
   (Agendar consulta) .> (Cadastrar cidadão) : <<include>>
 }
