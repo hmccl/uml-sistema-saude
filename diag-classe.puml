@@ -1,0 +1,19 @@
+@startuml
+
+class Classe_1 {
+  Atributo_1 : tipo
+  Atributo_2 : tipo
+  Metodo_1()
+  Metodo_2()
+}
+
+class Classe_2 {
+  Atributo_1 : tipo
+  Atributo_2 : tipo
+  Metodo_1()
+  Metodo_2()
+}
+
+Classe_1 -- Classe_2
+
+@enduml
