@@ -1,19 +1,42 @@
 @startuml
 
-class Classe_1 {
-  Atributo_1 : tipo
-  Atributo_2 : tipo
-  Metodo_1()
-  Metodo_2()
+class Consulta {
+  id: Integer
+  unidade: Unidade
+  medico: Medico
+  cidadao: Cidadao
+  getConsulta()
+  setConsulta()
 }
 
-class Classe_2 {
-  Atributo_1 : tipo
-  Atributo_2 : tipo
-  Metodo_1()
-  Metodo_2()
+class Unidade {
+  id : Integer
+  nome: String
+  endereco: String[]
+  estrutura: String[]
+  getUnidade()
+  setUnidade()
 }
 
-Classe_1 -- Classe_2
+class Medico {
+  crm : Integer
+  nome: String
+  especialidade: String
+  unidade: Unidade
+  getMedico()
+  setMedico()
+}
+
+class Cidadao {
+  cpf : Integer
+  nome: String
+  endereco: String[]
+  getCidadao()
+  setCidadao()
+}
+
+Consulta -- Medico
+Consulta -- Cidadao
+Medico -- Unidade
 
 @enduml
